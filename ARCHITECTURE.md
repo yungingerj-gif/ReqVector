@@ -11,7 +11,7 @@ The backend has **two** requirement-analysis implementations:
 
 All layered LLM calls use the **`AiClient`** abstraction (`engine/layered/ai/aiClient.ts`): in-process OpenAI JSON mode, **or** remote **`ai-service/`**, **or** a null client when neither is configured.
 
-**Full detail:** [`docs/requirements-and-ai-engine.md`](docs/requirements-and-ai-engine.md) (pipeline stages, `AiClient` implementations, call sites, `meta.ai_enabled` nuance).
+**Full detail:** layered pipeline and components are summarized in [`docs/architecture-baseline.md`](docs/architecture-baseline.md); classic vs layered routing is summarized in `README.md` (**Product surfaces**).
 
 ## Monorepo layout
 
@@ -79,6 +79,6 @@ See **`ai-service/README.md`** for run instructions and security notes.
 ## Related documentation
 
 - **`README.md`** — Product overview, classic API shapes, local run commands.
-- **`docs/requirements-and-ai-engine.md`** — Classic vs layered analysis, layered pipeline (L0–L6), `AiClient`, and where LLMs are invoked.
+- **`docs/architecture-baseline.md`** — Layered pipeline and major components (classic vs layered is also summarized in `README.md` **Product surfaces**).
 - **`docs/llm-training-manual.md`** — LLM fine-tuning datasets (JSONL), governance, and wiring a trained model via env vars / `ai-service`.
 - **`docs/`** — Other design notes (e.g. layered L6 contradiction spec) where present.

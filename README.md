@@ -1,8 +1,19 @@
 # ReqVector (INCOSE-style requirement analysis)
 
-ReqVector is a lightweight web tool that checks requirement statements for common quality issues using INCOSE-inspired rules (clarity, completeness, verifiability, etc.). It is designed to be cheap to run (rule-based, no AI required) and easy to integrate as an add-on via an HTTP API.
+ReqVector is a lightweight web tool that checks requirement statements for common quality issues using INCOSE-inspired rules (clarity, completeness, verifiability, etc.). **Core analysis is rule-based and runs with no AI** (cheap to deploy). The **layered workbench** adds **optional** LLM-assisted passes (attribute review, same-intent, contradiction adjudication, embeddings) when **`OPENAI_API_KEY`** (in-process OpenAI) or **`AI_SERVICE_URL`** (`ai-service/` gateway) is configured—deterministic rules still run either way.
 
-## How it works
+## Product surfaces
+
+| Surface | Where | AI |
+|--------|--------|-----|
+| **Classic analyzer** | UI: **`/classic`**. API: `POST /api/requirements/analyze`, specification uploads on classic routes. | **No** — rule-based only (graph, ripple, PDF audit, etc.). |
+| **Layered workbench** | UI: **`/dashboard`**, **`/review`**, reports, config, AI training, … API: **`/api/layered/*`**. | **Optional** — see env vars above. |
+
+More detail: **`ARCHITECTURE.md`**, **`docs/web-tool-user-guide.md`**, **`docs/architecture-baseline.md`**.
+
+The sections below describe the **classic** analyzer only (dimensions, graph, ripple, and its HTTP API).
+
+## How it works (classic)
 
 ### Input
 
