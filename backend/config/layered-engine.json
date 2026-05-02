@@ -1,0 +1,137 @@
+{
+  "organization_id": "default",
+  "scoring_penalties": {
+    "low": 10,
+    "medium": 20,
+    "high": 35
+  },
+  "scoring_weights": {
+    "unambiguous": 1,
+    "complete": 1,
+    "verifiable": 1,
+    "singular": 1,
+    "consistent_correct": 1
+  },
+  "rule_block_registry": {
+    "deterministic.unambiguous": true,
+    "deterministic.complete": true,
+    "deterministic.verifiable": true,
+    "deterministic.singular": true,
+    "deterministic.consistent_correct": true,
+    "ai.attribute_analysis": false,
+    "legacy.reconstruction": true,
+    "setLevel.cross_requirement": true,
+    "contradiction.intra_document": true,
+    "contradiction.parent_child": true
+  },
+  "thresholds": {
+    "min_text_length_for_complete": 8,
+    "max_words_for_singular_warn": 60,
+    "near_duplicate_jaccard": 0.82,
+    "near_duplicate_min_content_tokens_per_side": 4,
+    "long_requirement_word_count": 45,
+    "overlap_jaccard_floor": 0.58,
+    "overlap_min_shared_content_tokens": 4,
+    "overlap_min_shorter_coverage": 0.52,
+    "overlap_max_pairs": 15,
+    "terminology_drift_content_jaccard_floor": 0.42,
+    "terminology_drift_min_shared_content_tokens": 4,
+    "cross_semantic_alignment_floor": 0.1,
+    "same_intent_ai_lexical_floor": 0.28,
+    "same_intent_ai_max_candidates": 64
+  },
+  "set_level_cross": {
+    "ai_same_intent_enabled": false,
+    "ai_same_intent_max_pairs": 24
+  },
+  "dictionaries": {
+    "banned_terms": [],
+    "vague_terms": [
+      "user friendly",
+      "user-friendly",
+      "quickly",
+      "appropriately",
+      "sufficient",
+      "efficient",
+      "robust",
+      "intuitive",
+      "easy",
+      "fast",
+      "slow",
+      "asap",
+      "as soon as possible",
+      "adequate",
+      "reasonable",
+      "timely",
+      "optimize",
+      "minimize",
+      "maximize"
+    ],
+    "weak_modals": ["should", "may", "could", "might"],
+    "terminology_synonym_groups": [
+      ["client", "customer", "user", "end user"],
+      ["admin", "administrator", "operator"],
+      ["db", "database"]
+    ]
+  },
+  "singular_conjunction_patterns": {
+    "count_and_or_as_compound": true
+  },
+  "contradiction": {
+    "intra_pair_budget": 120,
+    "intra_jaccard_floor": 0.14,
+    "same_type_bonus": 0.15,
+    "shared_object_weight": 0.18,
+    "shared_condition_bonus": 0.2,
+    "hierarchy_similarity_floor": 0.1,
+    "hierarchy_pair_budget": 80,
+    "ai_intra_enabled": false,
+    "ai_hierarchy_enabled": false,
+    "intra_ai_max_pairs": 10,
+    "hierarchy_ai_max_pairs": 12,
+    "embedding_enabled": false,
+    "embedding_model": "text-embedding-3-small",
+    "embedding_neighbor_top_k": 16,
+    "embedding_neighbor_min_cosine": 0.38,
+    "embedding_cluster_min_cosine": 0.62,
+    "embedding_hierarchy_match": true,
+    "embedding_hierarchy_min_cosine": 0.28
+  },
+  "profiles": {
+    "default_active_spec": {
+      "id": "default_active_spec",
+      "mode": "active",
+      "enabled_rule_blocks": [
+        "deterministic.unambiguous",
+        "deterministic.complete",
+        "deterministic.verifiable",
+        "deterministic.singular",
+        "deterministic.consistent_correct",
+        "setLevel.cross_requirement",
+        "contradiction.intra_document",
+        "contradiction.parent_child"
+      ],
+      "ai_attribute_analysis": false,
+      "ai_legacy_augment": false,
+      "scoring_weights_override": {}
+    },
+    "legacy_spec": {
+      "id": "legacy_spec",
+      "mode": "legacy",
+      "enabled_rule_blocks": [
+        "deterministic.unambiguous",
+        "deterministic.complete",
+        "deterministic.verifiable",
+        "deterministic.singular",
+        "deterministic.consistent_correct",
+        "legacy.reconstruction",
+        "setLevel.cross_requirement",
+        "contradiction.intra_document",
+        "contradiction.parent_child"
+      ],
+      "ai_attribute_analysis": false,
+      "ai_legacy_augment": false,
+      "scoring_weights_override": {}
+    }
+  }
+}

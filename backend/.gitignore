@@ -1,0 +1,4 @@
+# Local AI steering pack (may contain proprietary text); copy from ai-training-pack.example.json to start.
+data/ai-training-pack.json
+data/ai-training-steering.jsonl
+data/domain-constraints.json

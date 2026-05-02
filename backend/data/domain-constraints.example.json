@@ -1,0 +1,36 @@
+{
+  "updated_at": "2026-04-07T12:00:00.000Z",
+  "summary": "Motor-drive subsystem: align interpretations of rotational and electrical quantities with ISO-style SI usage where the spec is silent.",
+  "constraints": [
+    {
+      "id": "ex-speed",
+      "label": "Shaft / mechanical speed",
+      "category": "mechanical",
+      "canonical_unit": "rad/s",
+      "alternate_units": ["rpm", "rev/min", "°/s"],
+      "synonyms": ["angular velocity", "motor speed", "rotational speed"],
+      "notes_for_llm": "If rpm is given, do not assume rad/s without conversion context.",
+      "enabled": true
+    },
+    {
+      "id": "ex-torque",
+      "label": "Torque",
+      "category": "mechanical",
+      "canonical_unit": "N·m",
+      "alternate_units": ["Nm", "lb·ft"],
+      "synonyms": ["shaft torque", "electromagnetic torque"],
+      "notes_for_llm": null,
+      "enabled": true
+    },
+    {
+      "id": "ex-current",
+      "label": "Motor bus current",
+      "category": "electrical",
+      "canonical_unit": "A",
+      "alternate_units": ["mA", "kA"],
+      "synonyms": ["phase current", "line current", "I_DC"],
+      "notes_for_llm": "Clarify RMS vs peak only when the requirement hinges on it.",
+      "enabled": true
+    }
+  ]
+}

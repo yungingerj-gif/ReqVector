@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "profile": "default_active_spec",
+    "mode": "active",
+    "analyzed_at": "2026-04-07T12:00:00.000Z",
+    "requirement_count": 1,
+    "source_document": "example.txt",
+    "ai_enabled": false,
+    "organization_id": "default"
+  },
+  "requirements": [
+    {
+      "requirement": {
+        "id": "FR-1",
+        "source_text": "FR-1: The system shall respond within 50 ms.",
+        "normalized_text": "FR-1: The system shall respond within 50 ms.",
+        "explicit_id": true,
+        "type": "Performance",
+        "actor": "system",
+        "action": "respond within 50 ms",
+        "thresholds": [{ "value": "50", "unit": "ms" }],
+        "tags": ["heuristic_type:performance"]
+      },
+      "findings": [],
+      "scores": {
+        "unambiguous": 100,
+        "complete": 100,
+        "verifiable": 90,
+        "singular": 100,
+        "consistent_correct": 100,
+        "overall": 98
+      }
+    }
+  ],
+  "set_level_findings": []
+}

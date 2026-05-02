@@ -1,0 +1,18 @@
+FR-1: The system shall display fault codes within 50 ms.
+FR-2: The system shall log all operator actions.
+FR-3: Maximum brake pressure shall be 200 bar ± 5 bar during normal operation.
+FR-4: The HMI shall use a responsive layout.
+FR-5: The controller shall sample inputs at 1 kHz.
+FR-6: Unauthorized writes shall be rejected.
+FR-7: The information shall be retained for audit purposes.
+FR-8: The module shall support CAN and Ethernet interfaces for diagnostics.
+FR-9: Availability shall be at least 99.9% measured monthly.
+FR-10: The system shall minimize latency (target not specified).
+
+--- LEGACY / WEAK ---
+NOTE: make UI nice
+Should be fast
+User friendly and quickly provide results
+maybe use database
+PR-LEG: as soon as possible complete calibration
+Interface to legacy box — TBD

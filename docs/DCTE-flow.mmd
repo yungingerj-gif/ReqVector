@@ -1,0 +1,42 @@
+flowchart TB
+  subgraph INPUT[" "]
+    A[RequirementFinding[]]
+  end
+
+  B[extractStructuredConstraint]
+  C[StructuredConstraint]
+  D[buildConstraintTuples]
+  E[ConstraintTuple with completeness & confidence]
+  F[buildLayers]
+  G[functionalLayer / performanceLayer / conditionLayer]
+  H[buildConstraintSpacePoints]
+  I[3D points x,y,z]
+  J[buildConstraintLinks]
+  K[ConstraintLink constrains/triggers/binds]
+  L[runDeltaAnalysis]
+  M[ConstraintDeltaVector from-to magnitude riskScore]
+  N[buildCompletionProposals]
+  O[CompletionProposal suggestedText placeholders]
+  P[DCTEResult]
+
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+  E --> H
+  H --> I
+  E --> J
+  J --> K
+  E --> L
+  G --> L
+  L --> M
+  M --> N
+  E --> N
+  N --> O
+  I --> P
+  K --> P
+  M --> P
+  O --> P
+  G --> P

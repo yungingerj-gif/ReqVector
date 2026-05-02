@@ -1,0 +1,54 @@
+{
+  "organization_id": "default",
+  "rule_block_registry": {
+    "deterministic.unambiguous": true,
+    "deterministic.complete": true,
+    "deterministic.verifiable": true,
+    "deterministic.singular": true,
+    "deterministic.cross_consistency": true,
+    "stub.ai_attribute_scoring": false
+  },
+  "thresholds": {
+    "ambiguity_term_count_for_fail": 1,
+    "min_text_length_for_complete": 8,
+    "max_words_for_singular_warn": 60
+  },
+  "required_completeness_fields": ["actor", "obligation", "verifiability"],
+  "dictionaries": {
+    "banned_terms": [],
+    "approved_vocabulary": [],
+    "glossary_mappings": {}
+  },
+  "scoring_weights": {
+    "unambiguous": 1,
+    "complete": 1,
+    "verifiable": 1,
+    "singular": 1,
+    "consistent_correct": 1
+  },
+  "profiles": {
+    "active_spec": {
+      "id": "active_spec",
+      "review_mode": "active_spec",
+      "enabled_rule_blocks": [
+        "deterministic.unambiguous",
+        "deterministic.complete",
+        "deterministic.verifiable",
+        "deterministic.singular",
+        "deterministic.cross_consistency",
+        "stub.ai_attribute_scoring"
+      ]
+    },
+    "legacy_spec": {
+      "id": "legacy_spec",
+      "review_mode": "legacy_spec",
+      "enabled_rule_blocks": [
+        "deterministic.unambiguous",
+        "deterministic.complete",
+        "deterministic.verifiable",
+        "deterministic.singular"
+      ]
+    }
+  },
+  "field_mappings": {}
+}

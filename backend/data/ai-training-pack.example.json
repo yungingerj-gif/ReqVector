@@ -1,0 +1,14 @@
+{
+  "updated_at": "2026-01-01T00:00:00.000Z",
+  "global_llm_instructions": "Replace with your domain rules. Example: Prefer ISO 26262 terminology for safety references; treat 'nominal' as non-faulted operating mode; never infer SIL levels not stated in text.",
+  "examples": [
+    {
+      "id": "example-1",
+      "layout_label": "Example topic card (disabled by default)",
+      "layout_notes": "Describe ID formats, column meanings, or section headers your specs use.",
+      "excerpt": "SRS-FR-001: Under nominal conditions, the ECU shall …",
+      "guidance_for_llm": "When judging overlap vs contradiction, treat parent 'shall' vs child 'may' as potential refinement, not automatic conflict.",
+      "enabled": false
+    }
+  ]
+}
