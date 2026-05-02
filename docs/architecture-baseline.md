@@ -2,7 +2,7 @@
 
 **Document type:** Product architecture baseline  
 **Repository:** ReqVector monorepo (layered workbench + classic analyzer + optional `ai-service`)  
-**Baseline date:** 2026-04-07  
+**Baseline date:** 2026-05-02  
 **Regenerate Word output:** `npm --workspace backend run docx:architecture-baseline`
 
 **Related:** `README.md` (**Product surfaces**), `ARCHITECTURE.md` (repo wiring), `docs/web-tool-user-guide.md` (operators).
@@ -602,4 +602,4 @@ Repurposeable **`docx`** npm scripts read **`docs/*.md`** and emit **`docs/*.doc
 | Version | Date | Notes |
 |---------|------|-------|
 | 1.0 | 2026-04-07 | Baseline snapshot: layered engine, embeddings, steering, domain library, feedback statuses. |
-| 1.1 | 2026-04-07 | Aligned with current code: classic vs layered surfaces and routes; `index.ts` mount list; `guessActor` / `complete.ts` actor-subject heuristics; docx script names (`llm-training-manual`, `web-tool-user-guide`); repo layout table refresh. |
+| 1.1 | 2026-05-02 | Aligned with current code: classic vs layered surfaces and routes; `index.ts` mount list; `guessActor` / `complete.ts` actor-subject heuristics; docx script names (`llm-training-manual`, `web-tool-user-guide`); repo layout table refresh. |
