@@ -1,7 +1,7 @@
 # ReqVector — Baseline Architecture & Design
 
 **Document type:** Product architecture baseline  
-**Repository:** ReqVector monorepo (layered workbench + classic analyzer + optional `ai-service`)  
+**Repository:** ReqVector monorepo (layered workbench + classic analyzer)  
 **Baseline date:** 2026-05-02  
 **Regenerate Word output:** `npm --workspace backend run docx:architecture-baseline`
 
